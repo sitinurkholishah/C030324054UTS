@@ -2,7 +2,11 @@
 #include <conio.h>
 using namespace std;
 
-
+void info(){
+  system("cls");
+  cout<<"indonesia hebat, poliban juara";
+  getch();
+}
 void dMenu(){
 system("cls");
 cout<<"Aplikasi Tampilan Menu"<<"\n";       
@@ -43,7 +47,7 @@ do
     /* code */
     break;  
    case '4':
-    mPertama("ke- empat");
+    info();
     /* code */
     break;  
   case '5':
