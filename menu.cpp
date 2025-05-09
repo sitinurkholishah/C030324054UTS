@@ -54,6 +54,27 @@ void tampilArray() {
   getch();
 }
 
+void sortArray() {
+  system("cls");
+  if (jumlah == 0) {
+      cout << "Array masih kosong!";
+  } else {
+      // Bubble Sort
+      for (int i = 0; i < jumlah - 1; i++) {
+          for (int j = 0; j < jumlah - i - 1; j++) {
+              if (arrayData[j] > arrayData[j + 1]) {
+                  int temp = arrayData[j];
+                  arrayData[j] = arrayData[j + 1];
+                  arrayData[j + 1] = temp;
+              }
+          }
+      }
+      cout << "Array berhasil diurutkan!";
+  }
+  getch();
+}
+
+
 void mPertama(string pesan){
 system("cls");
 cout<<"hallo saya menu "<<pesan;
@@ -70,14 +91,17 @@ do
   switch (pl)
   {
    case '1':
+   inputArray();
     /* code */
     mPertama("pertama");
     break;
    case '2':
+   tampilArray();
     mPertama("ke- dua");
     /* code */ 
     break;  
    case '3':
+   sortArray();
     mPertama("ke- tiga");
     /* code */
     break;  
