@@ -2,6 +2,10 @@
 #include <conio.h>
 using namespace std;
 
+const int MAX = 100;
+int arrayData[100];
+int jumlah = 0;
+
 void info(){
   system("cls");
   cout<<"indonesia hebat, poliban juara";
@@ -10,13 +14,44 @@ void info(){
 void dMenu(){
 system("cls");
 cout<<"Aplikasi Tampilan Menu"<<"\n";       
-cout<<"1. Menu Pertama"<<"\n";            
-cout<<"2. Menu Kedua"<<"\n";            
-cout<<"3. Menu Ketiga"<<"\n";           
-cout<<"4. Menu Keempat"<<"\n";            
+cout<<"1. Memasukkan nilai Array"<<"\n";            
+cout<<"2. Menampilkan Array"<<"\n";            
+cout<<"3. Mennyortir Array"<<"\n";           
+cout<<"4. Info"<<"\n";            
 cout<<"5. Exit"<<"\n";           
 cout<<"Masukan angka :";        
 
+}
+
+void inputArray(){
+  system("cls");
+  cout << "Berapa banyak data yang ingin dimasukkan? (max " << MAX << "): ";
+    cin >> jumlah;
+
+    if (jumlah > MAX || jumlah < 1) {
+        cout << "Jumlah tidak valid!";
+        getch();
+        return;
+    }
+    for (int i = 0; i < jumlah; i++) {
+      cout << "Masukkan data ke-" << i + 1 << ": ";
+      cin >> arrayData[i];
+  }
+  cout << "Data berhasil disimpan!";
+  getch();
+}
+
+void tampilArray() {
+  system("cls");
+  if (jumlah == 0) {
+      cout << "Array masih kosong!";
+  } else {
+      cout << "Isi Array:\n";
+      for (int i = 0; i < jumlah; i++) {
+          cout << arrayData[i] << " ";
+      }
+  }
+  getch();
 }
 
 void mPertama(string pesan){
