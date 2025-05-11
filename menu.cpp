@@ -8,7 +8,7 @@ int jumlah = 0;
 
 void info(){
   system("cls");
-  cout<<"indonesia hebat, poliban juara";
+  cout<<"hallo, sekarang saya sedang UTS";
   getch();
 }
 void dMenu(){
